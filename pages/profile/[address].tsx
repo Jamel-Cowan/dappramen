@@ -18,7 +18,11 @@ export default function ProfilePage() {
         <Container maxW={"1200"} p={5}>
             <Heading>{"Owned NFT(s)"}</Heading>
             <Text>Browse and manage your NFTs from this collection.</Text>
-            
+            <NFTGrid
+            data={ownedNfts}
+            isLoading={loadingOwnedNfts}
+            emptyText={"You don't own any NFTs yet from this collection"}
+            />
         </Container>
 
     )
